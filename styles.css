@@ -1,0 +1,180 @@
+body {
+  background-color: rgb(255, 254, 248);
+  border-top: 10px solid #c35;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  font-family: serif;
+  font-weight: 800;
+  font-size: 35pt;
+  /* background-color: #ccc; */
+  border-radius: 5px;
+}
+
+hr {
+  width: 100%;
+  margin-bottom: 40px;
+  border: 5px solid rgb(202, 54, 87);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+#Chart {
+  background-color: rgb(246, 245, 242);
+  border-radius: 5px;
+}
+table {
+  margin: 0 auto;
+  width: 95%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  text-align: center;
+  padding: 0;
+}
+
+table td {
+  background: rgb(246, 245, 242);
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 50px;
+}
+
+table td:first-of-type {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 50px;
+  background-color: grey;
+}
+
+table td:last-of-type {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+table img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 7px;
+  box-sizing: border-box;
+}
+
+table td:nth-child(2) {
+  width: 35%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  background-color: #2196f3;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  border: solid rgb(246, 245, 242) 3px;
+}
+
+.eye-checkbox {
+  display: none;
+}
+.eye-icon {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: grey;
+  border-radius: 10px 0 0 10px;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  min-height: 50px;
+}
+
+.eye {
+  margin: auto;
+  transform: rotate(45deg);
+  width: 15px;
+  height: 15px;
+  border-radius: 75% 15%;
+  border: solid 1px #ffffff;
+}
+
+.pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: solid 1px #ffffff;
+}
+
+.eye-checkbox:checked + .eye-icon {
+  background-color: green;
+  visibility: visible;
+}
+
+.eye-checkbox:not(:checked) + .eye-icon .eye,
+.eye-checkbox:not(:checked) + .eye-icon .pupil {
+  opacity: 0;
+}
+
+@media (hover: hover) {
+  .eye-checkbox:not(:checked):hover + .eye-icon {
+    background-color: green;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    width: 100%;
+  }
+  hr {
+    width: 100%;
+  }
+  table {
+    width: 95%;
+  }
+  #Chart {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    width: 100%;
+  }
+  hr {
+    width: 70%;
+  }
+  table {
+    width: 70%;
+  }
+  #Chart {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+}

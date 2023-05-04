@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Loan Volume</title>
+    <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>"> -->
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="shortcut icon" sizes="192x192" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+  </head>
+  <body>
+    <h1>Kreditvolumen</h1>
+    <!-- <hr /> -->
+    <div id="Chart">
+      <canvas id="myChart"></canvas>
+    </div>
+    <table id="data-table" style="color: white">
+      <tbody>
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Mintos"
+                onclick="toggle('Mintos')"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Mintos.svg" alt="Mintos" />
+          </td>
+          <td>€ 8,8 Milliarden</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Peerberry"
+                onclick="toggle('Peerberry')"
+                checked="checked"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Peerberry.svg" alt="Peerberry" />
+          </td>
+          <td>€ 1,7 Milliarden</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Twino"
+                onclick="toggle('Twino')"
+                checked="checked"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Twino.svg" alt="Twino" />
+          </td>
+          <td>€ 1,1 Milliarden</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Bondora"
+                onclick="toggle('Bondora')"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Bondora.svg" alt="Bondora" />
+          </td>
+          <td>€ 789 Millionen</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Estateguru"
+                onclick="toggle('Estateguru')"
+                checked="checked"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="EstateGuru.svg" alt="EstateGuru" />
+          </td>
+          <td>€ 706 Millionen</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Robocash"
+                onclick="toggle('Robocash')"
+                checked="checked"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Robocash.svg" alt="Robocash" />
+          </td>
+          <td>€ 604 Millionen</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Esketit"
+                onclick="toggle('Esketit')"
+                checked="checked"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Esketit.svg" alt="Esketit" />
+          </td>
+          <td>€ 203 Millionen</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Finbee"
+                onclick="toggle('Finbee')"
+                checked="checked"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Finbee.svg" alt="Finbee" />
+          </td>
+          <td>€ 110 Millionen</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Income"
+                onclick="toggle('Income')"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Income.svg" alt="Income" />
+          </td>
+          <td>€ 38 Millionen</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <label>
+              <input
+                type="checkbox"
+                class="eye-checkbox"
+                id="Lande"
+                onclick="toggle('Lande')"
+                autocomplete="off"
+              />
+              <div class="eye-icon">
+                <div class="eye">
+                  <div class="pupil"></div>
+                </div>
+              </div>
+            </label>
+          </td>
+          <td>
+            <img src="img/Lande.svg" alt="Lande" />
+          </td>
+          <td>€ 10 Millionen</td>
+          <td>
+            <button>Sign Up</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+  </body>
+</html>
