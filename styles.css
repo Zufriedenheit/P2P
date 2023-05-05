@@ -1,6 +1,6 @@
 body {
   background-color: rgb(255, 254, 248);
-  border-top: 10px solid #c35;
+  border-top: 10px solid rgb(93, 157, 56);
   margin: 0;
   padding: 0;
 }
@@ -35,6 +35,13 @@ hr {
   background-color: rgb(246, 245, 242);
   border-radius: 5px;
 }
+
+#header-row td {
+  font-size: 100%;
+  background-color: rgb(255, 254, 248);
+  height: 25px;
+}
+
 table {
   margin: 0 auto;
   width: 95%;
@@ -64,6 +71,7 @@ table td:first-of-type {
 table td:last-of-type {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  width: 15%;
 }
 
 table img {
@@ -86,11 +94,16 @@ button {
   background-color: #2196f3;
   color: white;
   padding: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
   margin: 0px;
   box-sizing: border-box;
   border: solid rgb(246, 245, 242) 3px;
 }
-
+button:active {
+  color: rgb(56, 56, 56);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
 .eye-checkbox {
   display: none;
 }
