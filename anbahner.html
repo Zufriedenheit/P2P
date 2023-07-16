@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles2.css" />
+    <title>Kreditgeber</title>
+  </head>
+  <script>
+    document.addEventListener("click", function(e){
+      const focus_element = document.querySelector(".in_focus");
+      const target_is_focused = e.target.closest(".in_focus");
+      const target_is_card = e.target.closest(".card");
+      const target_is_close = e.target.closest(".close");
+
+      // If no focused element exists and card has been clicked: focus it
+      if (!focus_element && target_is_card) {
+        // Put card into focus
+        target_is_card.classList.add("in_focus");
+        target_is_card.style.position = "absolute";
+        target_is_card.style.zIndex = "10";
+        target_is_card.style.boxShadow = "5px 10px 15px grey";
+        target_is_card.style.maxWidth = "95%";
+        const info_symbol = target_is_card.querySelector(".info");
+        const close_symbol = target_is_card.querySelector(".close");
+        info_symbol.style.display = "none";
+        close_symbol.style.display = "block";
+        // Show extra info
+        const extra_info = target_is_card.querySelectorAll(".extra");
+        extra_info.forEach((data) => {data.style.display = "block"});
+        // Blur the rest
+        const blurMe = document.querySelectorAll(".card:not(.in_focus)");
+        blurMe.forEach((myItem) => {myItem.style.filter = "blur(5px)"; myItem.style.opacity = "0.5";});
+
+      // If focused element does exist and clicked outside of it: remove focus 
+      } else if (focus_element && (!target_is_focused || target_is_close)) {
+        // Remove focus from card
+        focus_element.style.position = "";
+        focus_element.style.zIndex = "";
+        focus_element.style.boxShadow = "";
+        focus_element.style.maxWidth = "";
+        focus_element.classList.remove("in_focus");
+        const info_symbol = focus_element.querySelector(".info");
+        const close_symbol = focus_element.querySelector(".close");
+        info_symbol.style.display = "block";
+        close_symbol.style.display = "none";
+        // Hide extra info
+        const extra_info = focus_element.querySelectorAll(".extra");
+        extra_info.forEach((data) => {data.style.display = "none"});
+        // Unblur everything
+        const blurMe = document.querySelectorAll(".card");
+        blurMe.forEach((myItem) => {myItem.style.filter = ""; myItem.style.opacity = "";});
+      }
+    });
+
+  </script>
+  <body>
+    <h1>Kreditgeber</h1>
+    <div class="container">
+      <!-- onclick="toggleMe('#creditstar') -->
+      <div class="card">
+        <div class="card_header">
+          <img src="img/Creditstar.mini.svg" alt="Creditstar logo" width="150px" style="margin-bottom: 14px; margin-top: 4px;"/>
+          <svg class="info" viewBox="15 15 130 130"><g fill="currentColor"><path d="M80 15c-35.88 0-65 29.12-65 65s29.12 65 65 65 65-29.12 65-65-29.12-65-65-65zm0 10c30.36 0 55 24.64 55 55s-24.64 55-55 55-55-24.64-55-55 24.64-55 55-55z"/><path d="M89.998 51.25a11.25 11.25 0 1 1-22.5 0 11.25 11.25 0 1 1 22.5 0zM90.665 110.96c-.069 2.73 1.211 3.5 4.327 3.82l5.008.1V120H60.927v-5.12l5.503-.1c3.291-.1 4.082-1.38 4.327-3.82V80.147c.035-4.879-6.296-4.113-10.757-3.968v-5.074L90.665 70"/></g></svg>
+          <svg class="close" viewBox="5.283 5.283 13.434 13.434"><path d="m18.717 6.697-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>
+        </div>
+        <div class="content">
+          <div class="fixed">
+            <div>Gründungsjahr:</div>
+            <div>Portfoliogröße:</div>
+            <div>Eigenkapitalquote:</div>
+            <div>Plattformen:</div>
+            <div class="extra">Länder:</div>
+            <div class="extra">Berichte:</div>
+          </div>
+          <div class="column">
+            <div>2012</div>
+            <div class="size_bar">199 € Mio. </div>
+            <div class="size_bar"><div class="equity" style="width: 19%;">19%</div></div>
+            <div class="plattforms">
+                <div class="invest"><img src="img/Mintos.mini.svg" alt="Mintos"></div>
+                <div class="invest"><img src="img/Lendermarket.mini.svg" alt="Lendermarket"></div>
+            </div>
+            <div class="extra">🇬🇧🇩🇰🇸🇪🇫🇮🇪🇪🇵🇱🇨🇿🇪🇸</div>
+            <div class="extra"><a href="google.com">Investor Relations</a></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_header">
+          <img src="img/IuteCredit.mini.svg" alt="IuteCredit logo" width="100px" style="margin-bottom: 12px;"/>
+          <svg class="info" viewBox="15 15 130 130"><g fill="currentColor"><path d="M80 15c-35.88 0-65 29.12-65 65s29.12 65 65 65 65-29.12 65-65-29.12-65-65-65zm0 10c30.36 0 55 24.64 55 55s-24.64 55-55 55-55-24.64-55-55 24.64-55 55-55z"/><path d="M89.998 51.25a11.25 11.25 0 1 1-22.5 0 11.25 11.25 0 1 1 22.5 0zM90.665 110.96c-.069 2.73 1.211 3.5 4.327 3.82l5.008.1V120H60.927v-5.12l5.503-.1c3.291-.1 4.082-1.38 4.327-3.82V80.147c.035-4.879-6.296-4.113-10.757-3.968v-5.074L90.665 70"/></g></svg>
+          <svg class="close" viewBox="5.283 5.283 13.434 13.434"><path d="m18.717 6.697-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>
+        </div>
+        <div class="content">
+            <div class="fixed">
+              <div>Gründungsjahr:</div>
+              <div>Portfoliogröße:</div>
+              <div>Eigenkapitalquote:</div>
+              <div>Plattformen:</div>
+            </div>
+            <div class="column">
+              <div>2007</div>
+              <div class="size_bar">322 € Mio. </div>
+              <div class="size_bar"><div class="equity" style="width: 17%;">17%</div></div>
+              <div class="plattforms">
+                <div class="invest"><img src="img/Mintos.mini.svg" alt="Mintos"></div>
+            </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card_header">
+          <img src="img/PlacetGroup.mini.svg" alt="PlacetGroup" width="140px" style="margin-bottom: 12px; margin-top: 4px;"/>
+          <svg class="info" viewBox="15 15 130 130"><g fill="currentColor"><path d="M80 15c-35.88 0-65 29.12-65 65s29.12 65 65 65 65-29.12 65-65-29.12-65-65-65zm0 10c30.36 0 55 24.64 55 55s-24.64 55-55 55-55-24.64-55-55 24.64-55 55-55z"/><path d="M89.998 51.25a11.25 11.25 0 1 1-22.5 0 11.25 11.25 0 1 1 22.5 0zM90.665 110.96c-.069 2.73 1.211 3.5 4.327 3.82l5.008.1V120H60.927v-5.12l5.503-.1c3.291-.1 4.082-1.38 4.327-3.82V80.147c.035-4.879-6.296-4.113-10.757-3.968v-5.074L90.665 70"/></g></svg>
+          <svg class="close" viewBox="5.283 5.283 13.434 13.434"><path d="m18.717 6.697-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>
+        </div>
+        <div class="content">
+            <div class="fixed">
+              <div>Gründungsjahr:</div>
+              <div>Portfoliogröße:</div>
+              <div>Eigenkapitalquote:</div>
+              <div>Plattformen:</div>
+            </div>
+            <div class="column">
+              <div>2005</div>
+              <div class="size_bar">53 € Mio. </div>
+              <div class="size_bar"><div class="equity" style="width: 49%;">49%</div></div>
+              <div class="plattforms">
+                <div class="invest"><img src="img/Mintos.mini.svg" alt="Mintos"></div>
+            </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 254, 248);
+  border-top: 10px solid rgb(93, 157, 56);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px auto;
+  font-family: serif;
+  font-weight: 800;
+  font-size: 35pt;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 0 10px 10px 10px;
+}
+
+.card {
+  border-radius: 0 0 8px 8px;
+  border-top: 3px solid rgb(93, 157, 56);
+  background-color: rgb(246, 245, 242);
+  padding: 10px;
+  width: min(100vw, 400px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card:hover {
+  background-color: rgb(236, 235, 232);
+}
+
+.card:hover .info {
+  color: #3838f0;
+}
+
+.card_header {
+  width: 100%;
+  display: flex;
+}
+.info, .close {
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  color: #4b4b4b;
+}
+
+.close {
+  width: 22px;
+  height: 22px;
+  display: none;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.close:hover {
+  background-color: #c6c4c4dd;
+}
+.content {
+  display: flex;
+  gap: 20px;
+  min-width: 100%;
+}
+
+.column {
+  flex-grow: 1;
+}
+
+.fixed {
+  flex: none;
+}
+
+.fixed > div {
+  margin-bottom: 8px;
+}
+
+.column > div {
+  margin-bottom: 8px;
+}
+
+.size_bar {
+    text-align: center;
+    background-color: #c6c4c4dd;
+}
+.equity {
+  background-color: rgb(101, 154, 101);
+  text-align: center;
+}
+.iute {
+    width: 20%;
+    background-color: rgb(101, 154, 101);
+    text-align: center;
+}
+
+.plattforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+}
+.invest {
+    background-color: #ffffffdd;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.invest:hover {
+  box-shadow: 0px 0px 3px #00000057;
+}
+
+.invest img {
+  width: 80px;
+  height: 20px;
+}
+
+.extra {
+  display: none;
+}
+
+
+
+

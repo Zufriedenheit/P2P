@@ -6,29 +6,13 @@ body {
 }
 
 h1 {
-  color: rgb(0, 0, 0);
   text-align: center;
-  width: 60%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
   font-family: serif;
   font-weight: 800;
   font-size: 35pt;
-  /* background-color: #ccc; */
-  border-radius: 5px;
-}
-
-hr {
-  width: 100%;
-  margin-bottom: 40px;
-  border: 5px solid rgb(202, 54, 87);
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 0;
-  margin-right: 0;
-  padding: 0;
 }
 
 #Chart {
@@ -157,12 +141,6 @@ button:active {
 }
 
 @media screen and (max-width: 1024px) {
-  h1 {
-    width: 100%;
-  }
-  hr {
-    width: 100%;
-  }
   table {
     width: 95%;
   }
@@ -175,12 +153,6 @@ button:active {
 }
 
 @media screen and (min-width: 1024px) {
-  h1 {
-    width: 100%;
-  }
-  hr {
-    width: 70%;
-  }
   table {
     width: 70%;
   }
