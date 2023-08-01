@@ -7,68 +7,32 @@
     <link rel="stylesheet" href="styles2.css" />
     <title>Kreditgeber</title>
   </head>
-  <script>
-    document.addEventListener("click", function (e) {
-      const focus_element = document.querySelector(".in_focus");
-      const target_is_focused = e.target.closest(".in_focus");
-      const target_is_card = e.target.closest(".card");
-      const target_is_link = e.target.closest("a");
-      const target_is_close = e.target.closest(".close");
 
-      // If no focused element exists and card (but not link on it) has been clicked: focus it
-      if (!focus_element && target_is_card && !target_is_link) {
-        // Put card into focus
-        target_is_card.classList.add("in_focus");
-        target_is_card.style.position = "absolute";
-        target_is_card.style.zIndex = "10";
-        target_is_card.style.boxShadow = "5px 10px 15px grey";
-        target_is_card.style.maxWidth = "95%";
-        const info_symbol = target_is_card.querySelector(".info");
-        const close_symbol = target_is_card.querySelector(".close");
-        info_symbol.style.display = "none";
-        close_symbol.style.display = "block";
-        // Show extra info
-        const extra_info = target_is_card.querySelectorAll(".extra");
-        extra_info.forEach((data) => {data.style.display = "block";});
-        // Blur the rest
-        const blurMe = document.querySelectorAll(".card:not(.in_focus)");
-        blurMe.forEach((myItem) => {myItem.style.filter = "blur(5px)"; myItem.style.opacity = "0.5";});
-        // If focused element does exist and clicked outside of it: remove focus
-      } else if (focus_element && (!target_is_focused || target_is_close)) {
-        // Remove focus from card
-        focus_element.style.position = "";
-        focus_element.style.zIndex = "";
-        focus_element.style.boxShadow = "";
-        focus_element.style.maxWidth = "";
-        focus_element.classList.remove("in_focus");
-        const info_symbol = focus_element.querySelector(".info");
-        const close_symbol = focus_element.querySelector(".close");
-        info_symbol.style.display = "block";
-        close_symbol.style.display = "none";
-        // Hide extra info
-        const extra_info = focus_element.querySelectorAll(".extra");
-        extra_info.forEach((data) => {data.style.display = "none";});
-        // Unblur everything
-        const blurMe = document.querySelectorAll(".card");
-        blurMe.forEach((myItem) => {myItem.style.filter = ""; myItem.style.opacity = "";});
-      }
-    });
-  </script>
+  <script src="kreditgeber.js"></script>
 
   <body>
-    <h1>Kreditgeber</h1>
+    <div id="page-container">
+      <div id="content_wrap">
 
-    <div class="container">
-
-      <div class="card">
-        <div class="card_header">
-          <img src="img/Creditstar.mini.svg" alt="Creditstar logo"/>
-          <svg class="info" viewBox="15 15 130 130"><g fill="currentColor"><path d="M80 15c-35.88 0-65 29.12-65 65s29.12 65 65 65 65-29.12 65-65-29.12-65-65-65zm0 10c30.36 0 55 24.64 55 55s-24.64 55-55 55-55-24.64-55-55 24.64-55 55-55z"/><path d="M89.998 51.25a11.25 11.25 0 1 1-22.5 0 11.25 11.25 0 1 1 22.5 0zM90.665 110.96c-.069 2.73 1.211 3.5 4.327 3.82l5.008.1V120H60.927v-5.12l5.503-.1c3.291-.1 4.082-1.38 4.327-3.82V80.147c.035-4.879-6.296-4.113-10.757-3.968v-5.074L90.665 70"/></g></svg>
-          <svg class="close" viewBox="5.283 5.283 13.434 13.434"><path d="m18.717 6.697-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>
+        
+        <h1 onclick="show_nav(event)" >Kreditgeber <svg width="25px" height="25px" xml:space="preserve" viewBox="0.001 75 330 180"><path d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"/></svg></h1>
+        <div class="nav">
+          <a href="/anbahner.html"><h1>Kreditgeber <svg style="transform: rotate(270deg);" width="25px" height="25px" xml:space="preserve" viewBox="0.001 75 330 180"><path d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"/></svg></h1></a>
+          <hr style="border-style: dashed;" />
+          <a href="/index.html"><h1>Plattformen <svg style="transform: rotate(270deg);" width="25px" height="25px" xml:space="preserve" viewBox="0.001 75 330 180"><path d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"/></svg></h1></a>
         </div>
-        <div class="content">
-          <div>Gründung:</div>
-          <div>2012</div>
+        
+        <div class="container">
+          
+          <div class="card">
+            <div class="card_header">
+              <img src="img/Creditstar.mini.svg" alt="Creditstar logo"/>
+              <svg class="info" viewBox="15 15 130 130"><g fill="currentColor"><path d="M80 15c-35.88 0-65 29.12-65 65s29.12 65 65 65 65-29.12 65-65-29.12-65-65-65zm0 10c30.36 0 55 24.64 55 55s-24.64 55-55 55-55-24.64-55-55 24.64-55 55-55z"/><path d="M89.998 51.25a11.25 11.25 0 1 1-22.5 0 11.25 11.25 0 1 1 22.5 0zM90.665 110.96c-.069 2.73 1.211 3.5 4.327 3.82l5.008.1V120H60.927v-5.12l5.503-.1c3.291-.1 4.082-1.38 4.327-3.82V80.147c.035-4.879-6.296-4.113-10.757-3.968v-5.074L90.665 70"/></g></svg>
+              <svg class="close" viewBox="5.283 5.283 13.434 13.434"><path d="m18.717 6.697-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>
+            </div>
+            <div class="content">
+            <div>Gründung:</div>
+            <div>2012</div>
           <div>Größe:</div>
           <div class="size_bar">199 € Mio.</div>
           <div>Eigenkapital:</div>
@@ -91,14 +55,19 @@
             <a href="https://mintos.com" target="_blank"><img class="plat_logo" src="img/Mintos.mini.svg" alt="Mintos"/></a>
             <a href="https://lendermarket.com" target="_blank"><img class="plat_logo" src="img/Lendermarket.mini.svg" alt="Lendermarket"/></a>
           </div>
-          <div class="extra">Geschäftsbericht:</div>
-          <div class="extra"><a href="google.com">Investor Relations</a></div>
+          <div class="extra">Berichte:</div>
+          <div class="extra">
+            <a href="https://www.creditstar.com/files/creditstar_consolidated_annual_report_2020.pdf" target="_blank">2020</a>
+            <a href="https://www.creditstar.com/files/creditstar_consolidated_annual_report_2021.pdf" target="_blank">2021</a>
+          </div>
+          <div class="extra">Website:</div>
+          <div class="extra"><a href="https://www.creditstar.com/" target="_blank">creditstar.com</a></div>
         </div>
       </div>
-
+      
       <div class="card">
         <div class="card_header">
-          <img src="img/IuteCredit.mini.svg" alt="IuteCredit" style="height: 28px; margin-bottom: 12px;"/>
+          <img src="img/IuteCredit.mini.svg" alt="IuteCredit" style="height: 30px; margin-bottom: 10px;"/>
           <svg class="info" viewBox="15 15 130 130"><g fill="currentColor"><path d="M80 15c-35.88 0-65 29.12-65 65s29.12 65 65 65 65-29.12 65-65-29.12-65-65-65zm0 10c30.36 0 55 24.64 55 55s-24.64 55-55 55-55-24.64-55-55 24.64-55 55-55z"/><path d="M89.998 51.25a11.25 11.25 0 1 1-22.5 0 11.25 11.25 0 1 1 22.5 0zM90.665 110.96c-.069 2.73 1.211 3.5 4.327 3.82l5.008.1V120H60.927v-5.12l5.503-.1c3.291-.1 4.082-1.38 4.327-3.82V80.147c.035-4.879-6.296-4.113-10.757-3.968v-5.074L90.665 70"/></g></svg>
           <svg class="close" viewBox="5.283 5.283 13.434 13.434"><path d="m18.717 6.697-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>
         </div>
@@ -111,13 +80,28 @@
           <div class="size_bar"><div class="equity" style="width: 17%;">&nbsp;</div><div class="percent">17%</div></div>
           <div class="extra">Kapitalrendite:</div>
           <div class="size_bar extra"><div class="profit" style="width: 6%;">&nbsp;</div><div class="percent">6%</div></div>
+          <div class="extra">Länder:</div>
+          <div class="extra">
+            <div class="flag">🇦🇱<span class="tooltiptext">Albanien</span></div>
+            <div class="flag">🇧🇦<span class="tooltiptext">Bosnien</span></div>
+            <div class="flag">🇧🇬<span class="tooltiptext">Bulgarien</span></div>
+            <div class="flag">🇲🇩<span class="tooltiptext">Moldawien</span></div>
+            <div class="flag">🇲🇰<span class="tooltiptext">Nordmazedonien</span></div>
+          </div>
           <div>Plattformen:</div>
           <div class="plattforms">
             <img class="plat_logo" src="img/Mintos.mini.svg" alt="Mintos" />
           </div>
+          <div class="extra">Berichte:</div>
+          <div class="extra">
+            <a href="https://iutecredit.com/wp-content/uploads/2023/04/IuteCredit-Finance-S.a-r.l._FS-31.12.2022.pdf" target="_blank">2022</a>
+            <a href="https://iutecredit.com/investor/#reports" target="_blank">Alle</a>
+          </div>
+          <div class="extra">Website:</div>
+          <div class="extra"><a href="https://iutecredit.com/" target="_blank">iutecredit.com</a></div>
         </div>
       </div>
-
+      
       <div class="card">
         <div class="card_header">
           <img src="img/PlacetGroup.mini.svg" alt="PlacetGroup"/>
@@ -133,14 +117,74 @@
           <div class="size_bar"><div class="equity" style="width: 49%;">&nbsp;</div><div class="percent">49%</div></div>
           <div class="extra">Kapitalrendite:</div>
           <div class="size_bar extra"><div class="profit" style="width: 7%;">&nbsp;</div><div class="percent">7%</div></div>
+          <div class="extra">Länder:</div>
+          <div class="extra">
+            <div class="flag">🇪🇪<span class="tooltiptext">Estland</span></div>
+            <div class="flag">🇱🇹<span class="tooltiptext">Litauen</span></div>
+          </div>
           <div>Plattformen:</div>
           <div class="plattforms">
             <img class="plat_logo" src="img/Mintos.mini.svg" alt="Mintos"/>
             <img class="plat_logo" src="img/Moncera.mini.svg" alt="Moncera"/>
           </div>
+          <div class="extra">Berichte:</div>
+          <div class="extra">
+            <a href="https://placetgroup.com/files/en/2022/PlacetGroupFY2022audited.pdf" target="_blank">2022</a>
+            <a href="https://placetgroup.com/reports/2023" target="_blank">Alle</a>
+          </div>
+          <div class="extra">Website:</div>
+          <div class="extra"><a href="https://placetgroup.com/" target="_blank">placetgroup.com</a></div>
         </div>
       </div>
 
+      <div class="card">
+        <div class="card_header">
+          <img src="img/AvaFin.mini.svg" alt="AvaFin" style="height: 22px; margin-bottom: 14px;"/>
+          <svg class="info" viewBox="15 15 130 130"><g fill="currentColor"><path d="M80 15c-35.88 0-65 29.12-65 65s29.12 65 65 65 65-29.12 65-65-29.12-65-65-65zm0 10c30.36 0 55 24.64 55 55s-24.64 55-55 55-55-24.64-55-55 24.64-55 55-55z"/><path d="M89.998 51.25a11.25 11.25 0 1 1-22.5 0 11.25 11.25 0 1 1 22.5 0zM90.665 110.96c-.069 2.73 1.211 3.5 4.327 3.82l5.008.1V120H60.927v-5.12l5.503-.1c3.291-.1 4.082-1.38 4.327-3.82V80.147c.035-4.879-6.296-4.113-10.757-3.968v-5.074L90.665 70"/></g></svg>
+          <svg class="close" viewBox="5.283 5.283 13.434 13.434"><path d="m18.717 6.697-1.414-1.414L12 10.586 6.697 5.283 5.283 6.697 10.586 12l-5.303 5.303 1.414 1.414L12 13.414l5.303 5.303 1.414-1.414L13.414 12z"/></svg>
+        </div>
+        <div class="content">
+          <div>Gründung:</div>
+          <div>2012</div>
+          <div>Größe:</div>
+          <div class="size_bar">82 € Mio.</div>
+          <div>Eigenkapital:</div>
+          <div class="size_bar"><div class="equity" style="width: 28%;">&nbsp;</div><div class="percent">28%</div></div>
+          <div class="extra">Kapitalrendite:</div>
+          <div class="size_bar extra"><div class="profit" style="width: 10%;">&nbsp;</div><div class="percent">10%</div></div>
+          <div class="extra">Länder:</div>
+          <div class="extra">
+            <div class="flag">🇱🇻<span class="tooltiptext">Lettland</span></div>
+            <div class="flag">🇵🇱<span class="tooltiptext">Polen</span></div>
+            <div class="flag">🇨🇿<span class="tooltiptext">Tschechien</span></div>
+            <div class="flag">🇲🇽<span class="tooltiptext">Mexiko</span></div>
+            <div class="flag">🇪🇸<span class="tooltiptext">Spanien</span></div>
+          </div>
+          <div>Plattformen:</div>
+          <div class="plattforms">
+            <img class="plat_logo" src="img/Esketit.mini.svg" alt="Esketit"/>
+          </div>
+          <div class="extra">Berichte:</div>
+          <div class="extra">
+            <a href="https://storage.googleapis.com/esketit-public/reports/Newsletter%20about%202022%20results.pdf" target="_blank">2022</a>
+          </div>
+          <div class="extra">Website:</div>
+          <div class="extra"><a href="https://avafin.com/" target="_blank">avafin.com</a></div>
+        </div>
+      </div>
+      
     </div>
-  </body>
-</html>
+  </div>
+    <footer>
+      <span>© 2023</span>
+      <span>|</span>
+      <a href="/impressum.html">Impressum</a>
+      <span>|</span>
+      <a href="/datenschutz.html">Datenschutz</a>
+      <span>|</span>
+      <a href="/haftungsausschluss.html">Haftungsausschluss</a>
+    </footer>
+  </div>
+</body>
+  </html>
+  
