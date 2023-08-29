@@ -5,6 +5,7 @@ Improve main site:
 - [ ] Add other links from Circlewise
 - [ ] Update volume data
 - [ ] Minimize and adjust SVGs
+- [ ] Add Robot.txt
 
 Make Originator site:
 - [ ] Adjust sizes 
