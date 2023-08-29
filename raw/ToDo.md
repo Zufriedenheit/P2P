@@ -2,17 +2,17 @@
 
 Improve main site:
 - [ ] Add meta tag and look up SEO
-- [ ] Add other links from Circlewise
+- [x] Add other links from Circlewise
 - [ ] Update volume data
-- [ ] Minimize and adjust SVGs
-- [ ] Add Robot.txt
+- [x] Minimize and adjust SVGs
+- [x] Add Robot.txt
 
 Make Originator site:
-- [ ] Adjust sizes 
+- [x] Adjust sizes 
 - [ ] Add other Originators form Numbers file
-- [ ] Make Heading a drop-down
-- [ ] Add footer and Impressum to whole site
-- [ ] Add detailed overlay to originators with more info
+- [x] Make Heading a drop-down
+- [x] Add footer and Impressum to whole site
+- [x] Add detailed overlay to originators with more info
 
 Marketing stuff:
 - [ ] Post updates into forum

@@ -25,7 +25,7 @@ document.addEventListener("click", function (e) {
   if (!focus_element && target_is_card && !target_is_link && !nav_is_shown) {
     // Put card into focus
     target_is_card.classList.add("in_focus");
-    target_is_card.style.position = "absolute";
+    target_is_card.style.position = "fixed";
     target_is_card.style.zIndex = "10";
     target_is_card.style.boxShadow = "5px 10px 15px grey";
     target_is_card.style.maxWidth = "95%";

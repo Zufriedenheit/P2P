@@ -1,0 +1,7 @@
+User-agent: GPTBot
+Disallow: /
+
+User-agent: *
+Disallow: /datenschutz.html
+Disallow: /haftungsausschluss.html
+Disallow: /impressum.html
