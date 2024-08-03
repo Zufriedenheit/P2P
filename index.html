@@ -1,387 +1,448 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="P2P, Investieren, Kredite, Geldanlage, Rendite, Portfolio"/>
-    <meta name="description" content="Welche P2P Plattform ist die beste? Ein direkter Vergleich der Kreditvolumen.">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-    <link rel="shortcut icon" sizes="196x196" href="img/favicon.png" />
-    <link rel="apple-touch-icon" href="img/favicon.png" />
-    <title>Plattformen Kreditolumen</title>
-  </head>
-  <body>
-    <div id="page-container">
-      <div id="content_wrap">
-        <h1 onclick="show_nav(event)" >Plattformen <svg width="25px" height="25px" xml:space="preserve" viewBox="0.001 75 330 180"><path d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"/></svg></h1>
-        <div class="nav">
-          <a href="/index.html"><h1>Plattformen <svg style="transform: rotate(270deg);" width="25px" height="25px" xml:space="preserve" viewBox="0.001 75 330 180"><path d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"/></svg></h1></a>
-          <hr style="border-style: dashed;" />
-          <a href="/anbahner.html"><h1>Kreditgeber <svg style="transform: rotate(270deg);" width="25px" height="25px" xml:space="preserve" viewBox="0.001 75 330 180"><path d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"/></svg></h1></a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="P2P, Investieren, Kredite, Geldanlage, Rendite, Portfolio"
+        />
+        <meta
+            name="description"
+            content="Welche P2P Plattform ist die beste? Ein direkter Vergleich der Kreditvolumen."
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+        <link rel="shortcut icon" sizes="196x196" href="img/favicon.png" />
+        <link rel="apple-touch-icon" href="img/favicon.png" />
+        <title>Plattformen Kreditolumen</title>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content_wrap">
+                <h1 onclick="show_nav(event)">
+                    Plattformen
+                    <svg
+                        width="25px"
+                        height="25px"
+                        xml:space="preserve"
+                        viewBox="0.001 75 330 180"
+                    >
+                        <path
+                            d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"
+                        />
+                    </svg>
+                </h1>
+                <div class="nav">
+                    <a href="/index.html"
+                        ><h1>
+                            Plattformen
+                            <svg
+                                style="transform: rotate(270deg)"
+                                width="25px"
+                                height="25px"
+                                xml:space="preserve"
+                                viewBox="0.001 75 330 180"
+                            >
+                                <path
+                                    d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"
+                                />
+                            </svg></h1
+                    ></a>
+                    <hr style="border-style: dashed" />
+                    <a href="/anbahner.html"
+                        ><h1>
+                            Kreditgeber
+                            <svg
+                                style="transform: rotate(270deg)"
+                                width="25px"
+                                height="25px"
+                                xml:space="preserve"
+                                viewBox="0.001 75 330 180"
+                            >
+                                <path
+                                    d="M325.607 79.393c-5.857-5.857-15.355-5.858-21.213.001l-139.39 139.393L25.607 79.393c-5.857-5.857-15.355-5.858-21.213.001-5.858 5.858-5.858 15.355 0 21.213l150.004 150a14.999 14.999 0 0 0 21.212-.001l149.996-150c5.859-5.857 5.859-15.355.001-21.213z"
+                                />
+                            </svg></h1
+                    ></a>
+                </div>
+                <div id="Chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <table id="data-table" style="color: white">
+                    <tbody>
+                        <tr id="header-row">
+                            <td></td>
+                            <td>Plattform</td>
+                            <td>Gesamtvolumen</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Mintos"
+                                        onclick="toggle('Mintos')"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img src="img/Mintos.mini.svg" alt="Mintos" />
+                            </td>
+                            <td>€ 10,4 Mrd.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=b3vza7&i=004c67&r=https%3A%2F%2Fwww.mintos.com%2Fde%2Fmintos-affiliate-program','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Peerberry"
+                                        onclick="toggle('Peerberry')"
+                                        checked="checked"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img
+                                    src="img/Peerberry.mini.svg"
+                                    alt="Peerberry"
+                                />
+                            </td>
+                            <td>€ 2,7 Mrd.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=wc58g4&i=004c67&r=https%3A%2F%2Fpeerberry.com%2Fde%2F','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Twino"
+                                        onclick="toggle('Twino')"
+                                        checked="checked"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img src="img/Twino.mini.svg" alt="Twino" />
+                            </td>
+                            <td>€ 1,1 Mrd.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=4mnq1s&i=004c67&r=https%3A%2F%2Fwww.twino.eu%2Fde%2F','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Bondora"
+                                        onclick="toggle('Bondora')"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img src="img/Bondora.mini.svg" alt="Bondora" />
+                            </td>
+                            <td>€ 1 Mrd.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://bondora.com/ref/joshuaw2','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Robocash"
+                                        onclick="toggle('Robocash')"
+                                        checked="checked"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img
+                                    src="img/Robocash.mini.svg"
+                                    alt="Robocash"
+                                />
+                            </td>
+                            <td>€ 940 Mio.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=i33194&i=004c67&r=https%3A%2F%2Frobo.cash%2Fde','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Estateguru"
+                                        onclick="toggle('Estateguru')"
+                                        checked="checked"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img
+                                    src="img/EstateGuru.mini.svg"
+                                    alt="EstateGuru"
+                                />
+                            </td>
+                            <td>€ 824 Mio.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=va6db0&i=004c67&r=https%3A%2F%2Festateguru.co%2Fde%2Fget-started%2F','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Esketit"
+                                        onclick="toggle('Esketit')"
+                                        checked="checked"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img src="img/Esketit.mini.svg" alt="Esketit" />
+                            </td>
+                            <td>€ 602 Mio.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=poem11&i=004c67&r=https%3A%2F%2Fesketit.com%2Fde','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Finbee"
+                                        onclick="toggle('Finbee')"
+                                        checked="checked"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img src="img/Finbee.mini.svg" alt="Finbee" />
+                            </td>
+                            <td>€ 174 Mio.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://www.finbee.lt/en/invest/','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Income"
+                                        onclick="toggle('Income')"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img src="img/Income.mini.svg" alt="Income" />
+                            </td>
+                            <td>€ 111 Mio.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=vh1p82&i=004c67','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Lande"
+                                        onclick="toggle('Lande')"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img src="img/Lande.mini.svg" alt="Lande" />
+                            </td>
+                            <td>€ 25 Mio.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=lfw4z1&i=004c67','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        class="eye-checkbox"
+                                        id="Indemo"
+                                        onclick="toggle('Indemo')"
+                                        autocomplete="off"
+                                    />
+                                    <div class="eye-icon">
+                                        <div class="eye">
+                                            <div class="pupil"></div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </td>
+                            <td>
+                                <img src="img/Indemo.mini.svg" alt="Indemo" />
+                            </td>
+                            <td>€ 3,5 Mio.</td>
+                            <td>
+                                <button
+                                    onclick="window.open('https://c.trackmytarget.com/?a=w076e6&i=004c67','_blank')"
+                                >
+                                    Anmelden
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <footer>
+                <span>© 2024</span>
+                <span>|</span>
+                <a href="/impressum.html">Impressum</a>
+                <span>|</span>
+                <a href="/datenschutz.html">Datenschutz</a>
+                <span>|</span>
+                <a href="/haftungsausschluss.html">Haftungsausschluss</a>
+            </footer>
         </div>
-    <div id="Chart">
-      <canvas id="myChart"></canvas>
-    </div>
-    <table id="data-table" style="color: white">
-      <tbody>
-        <tr id="header-row">
-          <td></td>
-          <td>Plattform</td>
-          <td>Gesamtvolumen</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Mintos"
-                onclick="toggle('Mintos')"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Mintos.mini.svg" alt="Mintos" />
-          </td>
-          <td>€ 9,1 Mrd.</td>
-          <td>
-            <button
-              onclick="window.open('https://c.trackmytarget.com/?a=b3vza7&i=004c67&r=https%3A%2F%2Fwww.mintos.com%2Fde%2Fmintos-affiliate-program','_blank')"
-            >
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Peerberry"
-                onclick="toggle('Peerberry')"
-                checked="checked"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Peerberry.mini.svg" alt="Peerberry" />
-          </td>
-          <td>€ 1,9 Mrd.</td>
-          <td>
-            <button onclick="window.open('https://c.trackmytarget.com/?a=wc58g4&i=004c67&r=https%3A%2F%2Fpeerberry.com%2Fde%2F','_blank')">
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Twino"
-                onclick="toggle('Twino')"
-                checked="checked"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Twino.mini.svg" alt="Twino" />
-          </td>
-          <td>€ 1,1 Mrd.</td>
-          <td>
-            <button
-              onclick="window.open('https://c.trackmytarget.com/?a=4mnq1s&i=004c67&r=https%3A%2F%2Fwww.twino.eu%2Fde%2F','_blank')"
-            >
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Bondora"
-                onclick="toggle('Bondora')"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Bondora.mini.svg" alt="Bondora" />
-          </td>
-          <td>€ 838 Mio.</td>
-          <td>
-            <button
-              onclick="window.open('https://bondora.com/ref/joshuaw2','_blank')"
-            >
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Estateguru"
-                onclick="toggle('Estateguru')"
-                checked="checked"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/EstateGuru.mini.svg" alt="EstateGuru" />
-          </td>
-          <td>€ 729 Mio.</td>
-          <td>
-            <button
-              onclick="window.open('https://c.trackmytarget.com/?a=va6db0&i=004c67&r=https%3A%2F%2Festateguru.co%2Fde%2Fget-started%2F','_blank')"
-            >
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Robocash"
-                onclick="toggle('Robocash')"
-                checked="checked"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Robocash.mini.svg" alt="Robocash" />
-          </td>
-          <td>€ 674 Mio.</td>
-          <td>
-            <button onclick="window.open('https://c.trackmytarget.com/?a=i33194&i=004c67&r=https%3A%2F%2Frobo.cash%2Fde','_blank')">
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Esketit"
-                onclick="toggle('Esketit')"
-                checked="checked"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Esketit.mini.svg" alt="Esketit" />
-          </td>
-          <td>€ 295 Mio.</td>
-          <td>
-            <button onclick="window.open('https://c.trackmytarget.com/?a=poem11&i=004c67&r=https%3A%2F%2Fesketit.com%2Fde','_blank')">
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Finbee"
-                onclick="toggle('Finbee')"
-                checked="checked"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Finbee.mini.svg" alt="Finbee" />
-          </td>
-          <td>€ 124 Mio.</td>
-          <td>
-            <button
-              onclick="window.open('https://www.finbee.lt/en/invest/','_blank')"
-            >
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Income"
-                onclick="toggle('Income')"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Income.mini.svg" alt="Income" />
-          </td>
-          <td>€ 62 Mio.</td>
-          <td>
-            <button
-              onclick="window.open('https://c.trackmytarget.com/?a=vh1p82&i=004c67','_blank')"
-            >
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Lande"
-                onclick="toggle('Lande')"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Lande.mini.svg" alt="Lande" />
-          </td>
-          <td>€ 13 Mio.</td>
-          <td>
-            <button
-              onclick="window.open('https://c.trackmytarget.com/?a=lfw4z1&i=004c67','_blank')"
-            >
-              Anmelden
-            </button>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <label>
-              <input
-                type="checkbox"
-                class="eye-checkbox"
-                id="Indemo"
-                onclick="toggle('Indemo')"
-                autocomplete="off"
-              />
-              <div class="eye-icon">
-                <div class="eye">
-                  <div class="pupil"></div>
-                </div>
-              </div>
-            </label>
-          </td>
-          <td>
-            <img src="img/Indemo.mini.svg" alt="Indemo" />
-          </td>
-          <td>€ 3.3 Mio.</td>
-          <td>
-            <button
-              onclick="window.open('https://c.trackmytarget.com/?a=w076e6&i=004c67','_blank')"
-            >
-              Anmelden
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <footer>
-    <span>© 2024</span>
-    <span>|</span>
-    <a href="/impressum.html">Impressum</a>
-    <span>|</span>
-    <a href="/datenschutz.html">Datenschutz</a>
-    <span>|</span>
-    <a href="/haftungsausschluss.html">Haftungsausschluss</a>
-  </footer>
-    </div>
-    <script src="/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-    <script
-      data-goatcounter="https://p2ploans.goatcounter.com/count"
-      async
-      src="//gc.zgo.at/count.js"
-    ></script>
-    <script src="kreditgeber.js"></script>
-  </body>
+        <script src="/main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+        <script
+            data-goatcounter="https://p2ploans.goatcounter.com/count"
+            async
+            src="//gc.zgo.at/count.js"
+        ></script>
+        <script src="kreditgeber.js"></script>
+    </body>
 </html>
