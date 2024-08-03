@@ -87,7 +87,7 @@ async function createChart() {
         label: "Indemo",
         backgroundColor: "#0F68D2",
         borderColor: "#0F68D2",
-        data: Indemo,
+        data: [],
         pointRadius: 2,
       },
     ],
