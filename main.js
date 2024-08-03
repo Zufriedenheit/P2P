@@ -9,6 +9,7 @@ async function createChart() {
   Lande = await fetch("data/lande.json").then((res) => res.json());
   Bondora = await fetch("data/bondora.json").then((res) => res.json());
   Finbee = await fetch("data/finbee.json").then((res) => res.json());
+  Indemo = await fetch("data/indemo.json").then((res) => res.json());
   // Data
   const data = {
     datasets: [
@@ -82,6 +83,13 @@ async function createChart() {
         data: Finbee,
         pointRadius: 2,
       },
+      {
+        label: "Indemo",
+        backgroundColor: "#0F68D2",
+        borderColor: "rgb(252, 198, 77)",
+        data: Indemo,
+        pointRadius: 2,
+      },
     ],
   };
   // Configuration
@@ -121,15 +129,15 @@ async function createChart() {
         tooltip: {
           enabled: true,
           callbacks: {
-            title: context => {
-              console.log(context)
+            title: (context) => {
+              console.log(context);
               const d = new Date(context[0].parsed.x);
               const formattedDate = d.toLocaleString([], {
-                month: 'short',
-                year: 'numeric'
+                month: "short",
+                year: "numeric",
               });
               return formattedDate;
-            }
+            },
           },
         },
       },
