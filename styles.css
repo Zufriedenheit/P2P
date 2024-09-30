@@ -246,12 +246,12 @@ nav {
   }
   .nav-links a {
     margin-left: 8px;
-    font-size: 14px;
+    font-size: 15px;
   }
   table td:nth-child(2) {
-    width: 25%;
+    width: 28%;
   }
   table td {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
