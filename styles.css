@@ -1,42 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 17px;
+}
+
 body {
   background-color: rgb(255, 254, 248);
   border-top: 10px solid rgb(93, 157, 56);
-  margin: 0;
-  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-  margin: 8px auto;
-  font-family: Times, "Times New Roman", serif;
-  font-weight: 800;
-  font-size: 35pt;
-  width: max-content;
-  padding: 8px;
-  border-radius: 5px;
-  cursor: pointer;
+header {
+  padding: 10px 3px 10px 0px;
 }
 
-h1:hover {
-  background-color: rgb(236, 235, 232);
-}
-
-.nav {
-  width: min(95vw, 600px);
-  display: none;
-  background-color: rgb(255, 254, 248);
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 95%;
   margin: 0 auto;
-  box-shadow: 5px 10px 15px grey;
-  right: 0;
-  left: 0;
-  top: 10px;
-  padding: 0px 15px;
-  border-radius: 6px;
-  position: fixed;
 }
 
-.nav > a {
-  text-decoration: none;
+.title {
   color: black;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px;
+  white-space: nowrap;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: gray;
+  text-decoration: underline;
 }
 
 #Chart {
@@ -222,4 +233,43 @@ footer span:not(:first-child) {
     margin-right: auto;
     margin-bottom: 20px;
   }
+}
+
+header {
+    padding: 10px 3px 10px 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.title {
+    color: black;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: gray;
+    text-decoration: underline;
 }
